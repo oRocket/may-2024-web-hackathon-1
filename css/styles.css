@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    background: rgb(180, 158, 29);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+.hero-section {
+    background: url("/img/hero.jpg") 50% no-repeat;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+  
+.hero-section .hero-section-text {
+    color: rgb(133, 116, 21);
+    text-shadow: 1px 1px 2px #f0e8e8;
+}
+  
+h1 {
+    font-size: 3rem;
+    margin-top: -50%;
+}
+
+
+@media (max-width: 930px) {
+    label.logo {
+        font-size: 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+<!--
+section {
+    background: url(/img/hero.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+-->

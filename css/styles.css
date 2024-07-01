@@ -306,6 +306,65 @@ html{
   }
 
 
+/* Contact Details */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.contact-details, .form-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contact-details ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-details li {
+  display: flex;
+  align-items: center;
+}
+.contact-details li img {
+  width: 50px;
+  height: 50px;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form div {
+  margin-bottom: 15px;
+}
+.form-container label {
+  margin-bottom: 5px;
+  display: block;
+}
+.form-container input, .form-container textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.form-container input[type="submit"] {
+  width: auto;
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+}
+
 /* Media View */
 @media (max-width: 930px) {
     label.logo {

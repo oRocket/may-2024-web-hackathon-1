@@ -359,11 +359,6 @@ html{
   width: auto;
   align-self: flex-start;
 }
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-}
 
 /* Media View */
 @media (max-width: 930px) {
@@ -428,6 +423,12 @@ html{
     .row-1 section .icon{
         left: -60px;
     }
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
 }
 
 @media(max-width: 440px){

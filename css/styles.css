@@ -1,4 +1,4 @@
-
+/* General Styles */
 * {
     padding: 0;
     margin: 0;
@@ -16,6 +16,7 @@ img {
     height: auto;
 }
 
+/* Navigation Bar */
 nav {
     background: rgb(180, 158, 29);
     height: 80px;
@@ -24,12 +25,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
-
-label.logo {
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
 }
 
 nav ul {
@@ -44,6 +39,7 @@ nav ul li {
 nav ul li a {
     color: white;
     font-size: 17px;
+    font-weight: bold;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -51,7 +47,7 @@ nav ul li a {
 
 a.active,
 a:hover {
-    background: #1b9bff;
+    background: #f10e0e;
     transition: .5s;
 }
 
@@ -66,7 +62,22 @@ a:hover {
     display: none;
 }
 
+/* Logo Image */
+.logo-img {
+  width: 60px;
+  height: auto;
+}
 
+/* Hiding the close button by default */
+.closebtn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* Hero Section */
 .hero-section {
     background: url("/img/hero.jpg") 50% no-repeat;
     background-size: cover;
@@ -82,19 +93,34 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
 }
-  
+
 .hero-section .hero-section-text {
-    color: rgb(133, 116, 21);
-    text-shadow: 1px 1px 2px #f0e8e8;
+  color: rgb(133, 116, 21);
+  text-shadow: 1px 1px 2px #f0e8e8;
 }
-  
+
 h1 {
-    font-size: 4rem;
-    margin-top: -50%;
+  font-size: 4rem;
+  margin-top: -40%;
+}
+
+.download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(133, 116, 21);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.download-cv-button:hover {
+  background-color: darkgoldenrod;
 }
 
 /* Personal Information */
-
 .profile-container {
     display: flex;
     flex-direction: column;
@@ -183,21 +209,23 @@ table {
 }
 
 /* Education */
-html{
+html {
     scroll-behavior: smooth;
-  }
+}
  
-  ::selection {
+::selection {
     color: #fff;
     background: #8a0606;
-  }
-  .education {
+}
+
+.education {
     width: 100%;
     margin: 50px auto;
     padding: 0;
     position: relative;
-  }
-  .education .center-line {
+}
+
+.education .center-line {
     position: absolute;
     height: 100%;
     width: 4px;
@@ -205,25 +233,30 @@ html{
     left: 50%;
     top: 20px;
     transform: translateX(-50%);
-  }
-  .education .row{
+}
+
+.education .row {
     display: flex;
-  }
-  .education .row-1{
+}
+  
+.education .row-1 {
     justify-content: flex-start;
-  }
-  .education .row-2{
+}
+
+.education .row-2 {
     justify-content: flex-end;
-  }
-  .education .row section{
+}
+
+.education .row section {
     background: rgb(133, 116, 21);
     border-radius: 5px;
     width: calc(50% - 40px);
     height: auto;
     padding: 20px;
     position: relative;
-  }
-  .education .row section::before{
+}
+  
+.education .row section::before {
     position: absolute;
     content: "";
     height: 15px;
@@ -232,15 +265,18 @@ html{
     top: 28px;
     z-index: -1;
     transform: rotate(45deg);
-  }
-  .row-1 section::before{
+}
+
+.row-1 section::before {
     right: -7px;
-  }
-  .row-2 section::before{
+}
+
+.row-2 section::before {
     left: -7px;
-  }
-  .row section .icon,
-  .center-line .scroll-icon{
+}
+
+.row section .icon,
+.center-line .scroll-icon {
     position: absolute;
     background:rgb(133, 116, 21);
     height: 40px;
@@ -250,48 +286,52 @@ html{
     border-radius: 50%;
     color:rgb(133, 116, 21);
     box-shadow: 0 0 0 4px rgb(141, 15, 15), inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
-  }
-  .center-line .scroll-icon{
+}
+
+.center-line .scroll-icon {
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-  }
-  .row-1 section .icon{
+}
+.row-1 section .icon {
     top: 15px;
     right: -60px;
-  }
-  .row-2 section .icon{
+}
+
+.row-2 section .icon {
     top: 15px;
     left: -60px;
-  }
+}
 
-  .title {
+.title {
     color: #fff;
     text-align: left;
     font-size: 1.6rem;
-  }
+}
 
-  .info {
+.info {
     color: #ffd050;
     font-size: 1.3rem;
     text-align: left;
-  }
-  .date {
+}
+
+.date {
     color: #fff;
     font-size: 1.1rem;
     text-align: right;
-  }
+}
 
-  .row section .details,
-  .row section .bottom{
+.row section .details,
+.row section .bottom {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .row section p{
+.row section p {
     margin: 10px 0 17px 0;
-  }
-  .row section .bottom a {
+}
+
+.row section .bottom a {
     text-decoration: none;
     background: #f10e0e;
     color: #fff;
@@ -300,64 +340,73 @@ html{
     font-size: 1rem;
     font-weight: 200;
     transition: all 0.3s ease;
-  }
-  .row section .bottom a:hover {
-    transform: scale(0.97);
-  }
+}
 
+.row section .bottom a:hover {
+    transform: scale(0.97);
+}
 
 /* Contact Details */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 .contact-details, .form-container {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  box-sizing: border-box;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 .contact-details ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
+
 .contact-details li {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .contact-details li img {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
+
 .form-container form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .form-container form div {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
+
 .form-container label {
-  margin-bottom: 5px;
-  display: block;
+    margin-bottom: 5px;
+    display: block;
 }
+
 .form-container input, .form-container textarea {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
+
 .form-container input[type="submit"] {
-  width: auto;
-  align-self: flex-start;
+    width: auto;
+    align-self: flex-start;
 }
 
 /* Media View */
@@ -426,22 +475,66 @@ html{
 }
 
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
+    .container {
+        flex-direction: column;
+    }
 }
 
-@media(max-width: 440px){
-    .education .center-line,
-    .row section::before,
-    .row section .icon{
-      display: none;
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
     }
-    .education .row{
-      margin: 10px 0;
-    }
-  }
 
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    /* Show the menu icon and hide the close icon by default */
+    .menu-icon {
+        display: block;
+    }
+
+    .closebtn {
+        display: none;
+    }
+
+    /* Show the close icon and hide the menu icon when the menu is active */
+    #check:checked ~ .menu-icon {
+        display: none;
+    }
+
+    #check:checked ~ .closebtn {
+        display: block;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
 
 @media (max-width: 768px) {
     .responsive-table tr {
@@ -455,5 +548,16 @@ html{
 
     .responsive-table td table {
         width: 100%;
+    }
+}
+
+@media(max-width: 440px) {
+    .education .center-line,
+    .row section::before,
+    .row section .icon{
+      display: none;
+    }
+    .education .row{
+      margin: 10px 0;
     }
 }
